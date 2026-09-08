@@ -2,97 +2,111 @@
 
 **Pricelytics** es una plataforma inteligente orientada al análisis y optimización de precios para vendedores y negocios que comercializan productos en canales digitales.
 
+---
+
 ## 📌 Descripción
 
-Establecer el precio adecuado para un producto puede ser un desafío para los vendedores. Factores como los costos, el margen de ganancia, los precios de la competencia, la demanda y el comportamiento del mercado pueden influir directamente en la decisión de cuánto cobrar.
+Establecer el precio adecuado para un producto representa uno de los mayores desafíos para el comercio digital. Factores como los costos reales de producción, comisiones de plataformas, precios de la competencia y la dinámica del mercado influyen directamente en la rentabilidad de un negocio.
 
-**Pricelytics nace como una solución para facilitar esta decisión.**
+**Pricelytics** centraliza y procesa estos factores para transformar datos dispersos en recomendaciones estratégicas, permitiendo a los vendedores tomar decisiones informadas para maximizar sus márgenes sin perder competitividad.
 
-La plataforma busca recopilar y analizar información relacionada con productos y precios del mercado para convertirla en información útil para los vendedores. De esta manera, el usuario podrá conocer cómo se comportan los precios de productos similares, comparar su oferta con la competencia y obtener una referencia que le ayude a establecer precios más competitivos y rentables.
+---
 
 ## 🎯 Objetivo
 
-Desarrollar una plataforma que permita a los vendedores **analizar el comportamiento de los precios del mercado y tomar decisiones de fijación de precios basadas en datos**, buscando un equilibrio entre competitividad y rentabilidad.
+Desarrollar una plataforma que permita a los vendedores digitales **analizar el comportamiento de precios del mercado y tomar decisiones estratégicas basadas en datos**, equilibrando competitividad, costos reales y rentabilidad.
 
-## 💡 ¿Cómo funcionará?
+---
 
-Pricelytics permitirá al usuario consultar y analizar información relacionada con sus productos y el mercado.
+## 🏛️ Pilares del Sistema
 
-A partir de los datos disponibles, la plataforma podrá:
+```mermaid
+---
+config:
+    look: handDrawn
+    theme: neutral
+---
+graph TD
+    A("`**1. Costos Internos**
+    (Materia prima, empaque, comisiones)`")
 
-* Analizar precios de productos similares.
-* Comparar precios entre diferentes vendedores.
-* Identificar variaciones y tendencias de precios.
-* Analizar el comportamiento histórico de los precios.
-* Considerar los costos y márgenes de ganancia del vendedor.
-* Identificar oportunidades de ajuste de precios.
-* Proporcionar recomendaciones como referencia para la fijación de precios.
-* Presentar la información mediante indicadores y visualizaciones fáciles de interpretar.
+    C("`**3. Motor de Recomendación (IA)**
+    (Lógica de negocio, reglas y modelos)`")
 
-## 📊 Ejemplo
+    B("`**2. Inteligencia de Mercado**
+    (Monitoreo y scraping de competidores)`")
+    
+    D("`**4. Dashboard y Alertas**
+    (Visualización y soporte a la decisión)`")
 
-Un vendedor tiene un producto cuyo costo es de **$60.000** y actualmente lo comercializa a **$85.000**.
+    A --> C
+    B --> C
+    C --> D
+```
 
-Pricelytics analiza productos similares disponibles en el mercado y encuentra que sus precios se encuentran principalmente entre **$90.000 y $105.000**.
+1. **Estructura de Costos (*Unit Economics*):** Cálculo del costo real unitario (materia prima, empaque, envíos y comisiones de pasarelas/marketplaces) para fijar el piso mínimo de rentabilidad.
+2. **Inteligencia de Mercado:** Monitoreo y recopilación automatizada de precios, disponibilidad y tendencias de competidores en canales de comercio electrónico.
+3. **Motor de Recomendación (IA):** Algoritmos que cruzan los costos internos con las condiciones del mercado para sugerir rangos de precios óptimos según objetivos de margen o penetración.
+4. **Dashboard y Visualización:** Interfaz gráfica para consultar indicadores de salud de precios, simulaciones de márgenes y alertas ante cambios de la competencia.
 
-A partir de esta información, la plataforma podría indicar que existe una oportunidad para revisar el precio actual y mostrar al vendedor un rango de referencia, permitiéndole evaluar si desea modificar su precio.
+---
 
-> Pricelytics no busca establecer un precio obligatorio, sino proporcionar información que ayude al vendedor a tomar una mejor decisión.
+## 💡 ¿Cómo funciona?
 
-## 🚀 Propuesta de valor
+A partir de los datos ingresados por el vendedor y la información extraída del mercado, la plataforma:
 
-Pricelytics busca transformar los datos del mercado en **información clara y útil para la toma de decisiones comerciales**.
+* Analiza y compara precios frente a competidores directos.
+* Identifica variaciones, patrones y tendencias históricas de precios.
+* Calcula márgenes netos descontando costos operativos y comisiones.
+* Genera recomendaciones de ajuste de precios con base en escenarios comerciales.
+* Emite alertas tempranas ante cambios drásticos en el mercado.
 
-En lugar de que un vendedor tenga que revisar manualmente diferentes tiendas, comparar precios y analizar grandes cantidades de información, la plataforma centralizará estos datos y los presentará de una manera sencilla.
+---
 
-### De datos a decisiones
+## 📊 Ejemplo de Aplicación
 
-**Datos del mercado → Análisis → Información → Recomendación → Decisión**
+| Concepto | Valor | Detalle |
+| :--- | :--- | :--- |
+| **Costo total unitario** | \$60.000 | Materia prima + comisiones estimadas |
+| **Precio de venta actual** | \$85.000 | Margen bruto actual: \$25.000 (29.4%) |
+| **Rango de mercado detectado** | \$90.000 – \$105.000 | Precios de competidores para productos equivalentes |
 
-## 👥 Usuarios objetivo
+**Diagnóstico y recomendación de Pricelytics:**
+> *"El producto se encuentra un 5.5% por debajo del rango mínimo del mercado sin una justificación de volumen. Se recomienda evaluar un ajuste a **\$94.000**, lo que incrementa el margen unitario en un 36% manteniendo una posición competitiva dentro del percentil bajo."*
 
-Pricelytics está pensado principalmente para:
+> ℹ️ *Pricelytics no impone precios de forma automática; proporciona rangos y análisis cuantitativo para que el vendedor mantenga el control de su estrategia.*
 
-* Emprendedores.
-* Vendedores independientes.
-* Pequeños y medianos negocios.
-* Tiendas en línea.
-* Comerciantes que venden mediante marketplaces.
-* Negocios que necesitan analizar los precios de su mercado.
+---
 
 ## ⭐ Diferencial
 
-El principal diferencial de Pricelytics es que no pretende ser únicamente un comparador de precios.
+A diferencia de los monitores de precios convencionales que se limitan a mostrar promedios de la competencia, Pricelytics **cruza la información externa del mercado con la estructura de costos interna del negocio**.
 
-La plataforma busca **interpretar la información del mercado y convertirla en recomendaciones que puedan apoyar las decisiones de los vendedores**.
-
-Por ejemplo, en lugar de mostrar únicamente:
-
-> "El precio promedio del mercado es $100.000."
-
-Pricelytics busca proporcionar información como:
-
-> "Tu producto se encuentra por debajo del rango de precios observado en productos similares. Considerando el comportamiento del mercado y tu margen de ganancia, existe una oportunidad para revisar el precio."
-
-## 🔮 Proyección
-
-Pricelytics está planteado como un proyecto con posibilidad de crecimiento. En futuras versiones se podrán incorporar nuevas funcionalidades relacionadas con el análisis de mercados, comportamiento de consumidores, predicción de precios, seguimiento de competidores y generación de alertas.
-
-El objetivo es evolucionar hacia una herramienta que permita a los vendedores **comprender mejor su mercado y tomar decisiones comerciales respaldadas por datos**.
+* **Evita la guerra de precios a pérdida:** No sugiere bajar precios si eso compromete el margen mínimo de ganancia.
+* **Identifica capturas de margen:** Detecta cuándo el mercado permite subir precios sin perder tracción de ventas.
+* **Enfoque accesible:** Diseñado para pequeños y medianos comercios que no cuentan con herramientas de analítica empresarial avanzada.
 
 ---
 
-## 📍 Estado del proyecto
+## 👥 Usuarios Objetivo
 
-**Pricelytics se encuentra actualmente en etapa de desarrollo.**
-
-Este repositorio contiene el desarrollo progresivo de la plataforma y sus diferentes componentes.
+* Emprendedores y tiendas en línea independientes.
+* Vendedores en marketplaces (Mercado Libre, Amazon, etc.).
+* Pequeñas y medianas empresas (PyMEs) del sector e-commerce.
 
 ---
 
-## 👩‍💻 Proyecto
 
-**Pricelytics**
-Plataforma inteligente para análisis y optimización de precios.
+## 📍 Estado del Proyecto
 
-> *Convierte los datos del mercado en mejores decisiones.*
+Actualmente en fase de **diseño de arquitectura y desarrollo de prototipo inicial (MVP)** en el marco de investigación y desarrollo académico.
+
+---
+
+## 👥 Equipo
+
+* **Johana Catalina Gaviria Moncayo**
+* **Daniel Eduardo Pérez Muñoz**
+
+*Universidad Cooperativa de Colombia — Campus Pasto*
+*Programa de Ingeniería de Software*
