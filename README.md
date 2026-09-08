@@ -41,7 +41,7 @@ graph TD
 
     A --> C
     B --> C
-    C --> D
+    C <--> D
 ```
 
 1. **Estructura de Costos (*Unit Economics*):** Cálculo del costo real unitario (materia prima, empaque, envíos y comisiones de pasarelas/marketplaces) para fijar el piso mínimo de rentabilidad.
